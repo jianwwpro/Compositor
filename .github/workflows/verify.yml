@@ -77,3 +77,20 @@ jobs:
           path: '*.xcresult'
           retention-days: 7
           if-no-files-found: ignore
+
+      - name: Build release app
+        run: >
+          xcodebuild build
+          -project Compositor.xcodeproj
+          -scheme Compositor
+          -configuration Release
+          -destination 'platform=macOS,arch=arm64'
+          -derivedDataPath DerivedData
+          CODE_SIGN_IDENTITY=-
+
+      - name: Upload app
+        uses: actions/upload-artifact@v7
+        with:
+          name: Compositor-app
+          path: DerivedData/Build/Products/Release/Compositor.app
+          retention-days: 7
