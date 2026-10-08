@@ -228,7 +228,7 @@ struct ContentView: View {
         .onChange(of: session.effectsEditing) { _, selection in
             if let selection {
                 effectsPanel.onClose = { session.finishEffectsEditing(commit: false) }
-                effectsPanel.show(title: selection.kind.rawValue, content: EffectsSheet(session: session, kind: selection.kind))
+                effectsPanel.show(title: selection.kind.displayName, content: EffectsSheet(session: session, kind: selection.kind))
             } else { effectsPanel.close() }
         }
         .onChange(of: session.document?.layers) { _, layers in
@@ -242,7 +242,7 @@ struct ContentView: View {
         .onChange(of: session.selectionAmountOperation) { _, operation in
             if let operation {
                 selectionAmountPanel.onClose = { session.selectionAmountOperation = nil }
-                selectionAmountPanel.show(title: operation.rawValue + " Selection",
+                selectionAmountPanel.show(title: operation.displayName + " " + NSLocalizedString("Selection", comment: ""),
                     content: SelectionAmountSheet(session: session, operation: operation))
             } else { selectionAmountPanel.close() }
         }
@@ -251,7 +251,7 @@ struct ContentView: View {
             else {
                 filterPanel.onClose = { session.cancelFilter() }
                 let placement: FloatingPanelPlacement = session.filterEdit?.kind == .cameraRaw ? .dockedToMainWindowRight : .automatic
-                filterPanel.show(title: session.filterEdit?.kind.rawValue ?? "Filter", content: FilterSheet(session: session),
+                filterPanel.show(title: session.filterEdit?.kind.displayName ?? "Filter", content: FilterSheet(session: session),
                                  placement: placement)
             }
         }
@@ -307,7 +307,7 @@ struct ContentView: View {
                         }
                         .contentShape(Rectangle())
                 }
-                .buttonStyle(.plain).help(tool.label).accessibilityLabel(tool.label)
+                .buttonStyle(.plain).help(tool.displayName).accessibilityLabel(tool.displayName)
                 .foregroundStyle(.primary)
                 .accessibilityAddTraits(session.tool == tool ? .isSelected : [])
             }

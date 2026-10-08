@@ -13,14 +13,14 @@ struct CameraRawCurveControls: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Picker("Curve", selection: Binding(get: { edit?.cameraRawCurvePage ?? .parametric }, set: { session.filterEdit?.cameraRawCurvePage = $0 })) {
-                ForEach(CameraRawCurvePage.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+                ForEach(CameraRawCurvePage.allCases, id: \.self) { Text($0.displayName).tag($0) }
             }
             .pickerStyle(.segmented)
             .labelsHidden()
             .help("Parametric lifts tonal regions. Point places anchors on the curve.")
             if edit?.cameraRawCurvePage == .point {
                 Picker("Channel", selection: Binding(get: { edit?.cameraRawPointChannel ?? .rgb }, set: { session.filterEdit?.cameraRawPointChannel = $0 })) {
-                    ForEach(CameraRawPointChannel.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+                    ForEach(CameraRawPointChannel.allCases, id: \.self) { Text($0.displayName).tag($0) }
                 }
                 .pickerStyle(.segmented)
                 .labelsHidden()
@@ -272,7 +272,7 @@ struct CameraRawMixerControls: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Picker("Mixer", selection: Binding(get: { edit?.cameraRawMixerPage ?? .hsl }, set: { session.filterEdit?.cameraRawMixerPage = $0 })) {
-                ForEach(CameraRawMixerPage.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+                ForEach(CameraRawMixerPage.allCases, id: \.self) { Text($0.displayName).tag($0) }
             }
             .pickerStyle(.segmented)
             .labelsHidden()
@@ -280,7 +280,7 @@ struct CameraRawMixerControls: View {
             switch edit?.cameraRawMixerPage ?? .hsl {
             case .hsl:
                 Picker("Component", selection: Binding(get: { edit?.cameraRawMixerTab ?? .hue }, set: { session.filterEdit?.cameraRawMixerTab = $0 })) {
-                    ForEach(CameraRawMixerTab.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+                    ForEach(CameraRawMixerTab.allCases, id: \.self) { Text($0.displayName).tag($0) }
                 }
                 .pickerStyle(.segmented).labelsHidden()
                 .help("Hue shifts the color, Saturation its strength, and Luminance its brightness.")
@@ -315,9 +315,11 @@ struct CameraRawMixerControls: View {
 
     private func familySlider(_ index: Int) -> some View {
         let key = mixerKey
-        let help = "\((edit?.cameraRawMixerTab ?? .hue).rawValue) of \(CameraRawMixerSettings.names[index])."
+        let help = String(format: NSLocalizedString("%@ of %@", comment: ""),
+                          (edit?.cameraRawMixerTab ?? .hue).displayName,
+                          NSLocalizedString(CameraRawMixerSettings.names[index], comment: ""))
         return HStack {
-            Text(CameraRawMixerSettings.names[index]).frame(width: 78, alignment: .leading).help(help)
+            Text(NSLocalizedString(CameraRawMixerSettings.names[index], comment: "")).frame(width: 78, alignment: .leading).help(help)
                 .scrubbable(sensitivity: 1,
                             value: Binding(get: { raw.mixer[keyPath: key][index] },
                                            set: { value in update { $0.mixer[keyPath: key][index] = value } }), range: -100...100)
@@ -433,7 +435,7 @@ struct CameraRawGradingControls: View {
             // Five segments spelled out want 453 points and the docked panel has 374, so the
             // choice is a menu rather than a row that runs past the panel's edge.
             Picker("Grading", selection: Binding(get: { page }, set: { session.filterEdit?.cameraRawGradePage = $0 })) {
-                ForEach(CameraRawGradePage.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+                ForEach(CameraRawGradePage.allCases, id: \.self) { Text($0.displayName).tag($0) }
             }
             .pickerStyle(.menu)
             .labelsHidden()
@@ -446,7 +448,7 @@ struct CameraRawGradingControls: View {
                     wheel("Highlights", \.highlights)
                 }
             } else {
-                wheel(page.rawValue, pageKey)
+                wheel(page.displayName, pageKey)
             }
             slider("Blending", raw.grading.blending, 0...100, 50, "Controls how much the three tonal wheels overlap.") { value in
                 update { $0.grading.blending = value }

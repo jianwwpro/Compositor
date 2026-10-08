@@ -1,0 +1,581 @@
+/* Compositor — Simplified Chinese (zh-Hans) */
+
+/* ===== Main menu (CompositorApp.swift) ===== */
+"Undo" = "撤销";
+"Redo" = "重做";
+"New Canvas…" = "新建画布…";
+"Open Project…" = "打开项目…";
+"Open Recent" = "打开最近";
+"Clear Menu" = "清除菜单";
+"Import Images…" = "导入图像…";
+"Save" = "保存";
+"Save As…" = "另存为…";
+"Export PNG…" = "导出 PNG…";
+"Export JPEG…" = "导出 JPEG…";
+"Close Project" = "关闭项目";
+"Check for Updates…" = "检查更新…";
+"Command Palette…" = "命令面板…";
+"Fit Canvas" = "适合画布";
+"Actual Pixels" = "实际像素";
+"Zoom In" = "放大";
+"Zoom Out" = "缩小";
+"Pixel Grid (800% and above)" = "像素网格（800% 及以上）";
+"Show Transform Controls" = "显示变换控件";
+"Show" = "显示";
+"Grid" = "网格";
+"Guides" = "参考线";
+"Grid Settings…" = "网格设置…";
+"Rulers" = "标尺";
+"Snap" = "对齐";
+"Snap To" = "对齐到";
+"Layers" = "图层";
+"Document Bounds" = "文档边界";
+"Lock Guides" = "锁定参考线";
+"Clear Guides" = "清除参考线";
+"Hide Compositor" = "隐藏 Compositor";
+"Hide Others" = "隐藏其他";
+"Show All" = "全部显示";
+"Cut" = "剪切";
+"Copy" = "拷贝";
+"Copy Merged" = "合并拷贝";
+"Paste" = "粘贴";
+"Keyboard Shortcuts…" = "键盘快捷键…";
+"Fill with Foreground Color" = "填充前景色";
+"Fill with Background Color" = "填充背景色";
+"Clear Selection Pixels" = "清除选区像素";
+"Content-Aware Fill…" = "内容识别填充…";
+"All" = "全部";
+"Deselect" = "取消选择";
+"Inverse" = "反选";
+"Layer's Pixels" = "图层像素";
+"Subject" = "主体";
+"Color Range…" = "色彩范围…";
+"Mask's Black Areas" = "蒙版黑色区域";
+"Expand…" = "扩展…";
+"Contract…" = "收缩…";
+"Feather…" = "羽化…";
+"Curves…" = "曲线…";
+"Levels…" = "色阶…";
+"Hue/Saturation…" = "色相/饱和度…";
+"Canvas Size…" = "画布大小…";
+"Image Size…" = "图像大小…";
+"Trim…" = "裁切…";
+"Rotate Canvas 90° Clockwise" = "画布顺时针旋转 90°";
+"Rotate Canvas 90° Counterclockwise" = "画布逆时针旋转 90°";
+"Flip Canvas Horizontal" = "水平翻转画布";
+"Flip Canvas Vertical" = "垂直翻转画布";
+"New Adjustment Layer" = "新建调整图层";
+"Edit Adjustment…" = "编辑调整…";
+"Transform Selection" = "变换选区";
+"Transform Layer" = "变换图层";
+"Duplicate Layer" = "复制图层";
+"Layer via Copy" = "通过拷贝的图层";
+"Create Clipping Mask" = "创建剪贴蒙版";
+"Release Clipping Mask" = "释放剪贴蒙版";
+"Group Selected Layers" = "编组所选图层";
+"Ungroup Layers" = "取消图层编组";
+"Move Out of Folder" = "移出文件夹";
+"New Blank Layer" = "新建空白图层";
+"Rename Layer…" = "重命名图层…";
+"Show Layer" = "显示图层";
+"Hide Layer" = "隐藏图层";
+"Move Layer Up" = "上移图层";
+"Move Layer Down" = "下移图层";
+"Flip Layer Horizontal" = "水平翻转图层";
+"Flip Layer Vertical" = "垂直翻转图层";
+"Delete Layer" = "删除图层";
+"Delete Layers" = "删除图层";
+"Delete Layer Mask" = "删除图层蒙版";
+
+/* ===== Tools (NavigationTool.label in EditorSession.swift) ===== */
+"Type (T)" = "文字 (T)";
+"Eyedropper (I)" = "吸管 (I)";
+"Marquee (M)" = "选框 (M)";
+"Lasso (L)" = "套索 (L)";
+"Magic (W) · Tab switches Wand and Object" = "魔棒 (W) · Tab 切换魔棒与对象";
+"Brush (B) · Eraser (E)" = "画笔 (B) · 橡皮擦 (E)";
+"Spot Healing Brush (J)" = "污点修复画笔 (J)";
+"Clone Stamp (S) · Option-click sets the source" = "仿制图章 (S) · Option-点击设置取样点";
+"Smear (R)" = "涂抹 (R)";
+"Gradient (G)" = "渐变 (G)";
+"Shape (U) · Shift-U switches Rectangle/Ellipse" = "形状 (U) · Shift-U 切换矩形/椭圆";
+"Crop (C)" = "裁剪 (C)";
+"Move / Transform (V)" = "移动 / 变换 (V)";
+"Hand (H)" = "抓手 (H)";
+"Zoom (Z)" = "缩放 (Z)";
+
+/* ===== Filter names (FilterKind.rawValue) ===== */
+"Gaussian Blur" = "高斯模糊";
+"Motion Blur" = "动感模糊";
+"Add Noise" = "添加杂色";
+"Vignette" = "晕影";
+"Bloom / Glow" = "光晕 / 发光";
+"Dither" = "抖动";
+"Tonal Contrast" = "色调对比";
+"Lens Correction" = "镜头校正";
+"Camera Raw Filter" = "Camera Raw 滤镜";
+"Remove Background" = "移除背景";
+"Content-Aware Fill" = "内容识别填充";
+"Curves" = "曲线";
+"Exposure" = "曝光";
+"Gradient Map" = "渐变映射";
+"Grain" = "颗粒";
+"Black & White" = "黑白";
+"Color Balance" = "色彩平衡";
+
+/* ===== Adjustment layer names (AdjustmentKind.rawValue) ===== */
+"Hue/Saturation" = "色相/饱和度";
+"Levels" = "色阶";
+"Invert" = "反相";
+
+/* ===== Shapes (ShapeKind.rawValue) ===== */
+"Rectangle" = "矩形";
+"Ellipse" = "椭圆";
+"Line" = "直线";
+
+/* ===== Wand modes (WandMode.rawValue) ===== */
+"Wand" = "魔棒";
+"Object" = "对象";
+
+/* ===== Lasso kinds (LassoKind.rawValue) ===== */
+"Freehand" = "自由套索";
+"Polygonal" = "多边形套索";
+
+/* ===== Selection modes (SelectionMode.rawValue) ===== */
+"New" = "新建";
+"Add" = "添加";
+"Subtract" = "减去";
+
+/* ===== Background quality (BackgroundQuality.rawValue) ===== */
+"Basic" = "基础";
+"Advanced" = "高级";
+
+/* ===== Layer blend modes (LayerBlendMode.rawValue) ===== */
+/* "Subtract" and "Color" reuse the values defined above. */
+"Normal" = "正常";
+"Darken" = "变暗";
+"Multiply" = "正片叠底";
+"Color Burn" = "颜色加深";
+"Linear Burn" = "线性加深";
+"Lighten" = "变亮";
+"Screen" = "滤色";
+"Color Dodge" = "颜色减淡";
+"Linear Dodge (Add)" = "线性减淡（添加）";
+"Overlay" = "叠加";
+"Soft Light" = "柔光";
+"Hard Light" = "强光";
+"Vivid Light" = "亮光";
+"Linear Light" = "线性光";
+"Pin Light" = "点光";
+"Hard Mix" = "实色混合";
+"Difference" = "差值";
+"Exclusion" = "排除";
+"Divide" = "划分";
+"Hue" = "色相";
+"Saturation" = "饱和度";
+"Luminosity" = "明度";
+
+/* ===== Brush / blur modes ===== */
+"Erase" = "擦除";
+"Liquify" = "液化";
+"Blur" = "模糊";
+"Smudge" = "涂抹";
+
+/* ===== Spot healing modes ===== */
+"Content-Aware" = "内容识别";
+"Create Texture" = "创建纹理";
+"Proximity Match" = "邻近匹配";
+
+/* ===== Layer sampling (LayerSampling.rawValue) ===== */
+"Nearest" = "邻近";
+"Smooth" = "平滑";
+"High quality" = "高质量";
+
+/* ===== Color channels (LevelsChannel.rawValue) ===== */
+"RGB" = "RGB";
+"Red" = "红";
+"Green" = "绿";
+"Blue" = "蓝";
+
+/* ===== Gradient style / shape ===== */
+"Foreground to Background" = "前景到背景";
+"Foreground to Transparent" = "前景到透明";
+"Linear" = "线性";
+"Radial" = "径向";
+
+/* ===== Levels sampling / auto ===== */
+"Black" = "黑";
+"Gray" = "灰";
+"White" = "白";
+"Contrast" = "对比度";
+"Color + neutral midtones" = "颜色 + 中性中间调";
+
+/* ===== Main window chrome (ContentView.swift) ===== */
+"Eyedropper" = "吸管";
+"Sample Ring" = "取样环";
+"Select a tool" = "选择工具";
+"New canvas" = "新建画布";
+"Fit" = "适合";
+"100%" = "100%";
+"OK" = "好";
+"sRGB · Transparent" = "sRGB · 透明";
+"Ready when you are" = "随时可以开始";
+"Working…" = "处理中…";
+"Importing images…" = "正在导入图像…";
+"Drag to resize the panel" = "拖动以调整面板大小";
+"Zoom in (⌘+)" = "放大 (⌘+)";
+"Zoom out (⌘−)" = "缩小 (⌘−)";
+"Fit canvas in window (⌘0)" = "使画布适合窗口 (⌘0)";
+"Actual pixels (⌘1)" = "实际像素 (⌘1)";
+"New canvas (⌘N)" = "新建画布 (⌘N)";
+
+/* ===== Common controls ===== */
+"Cancel" = "取消";
+"Done" = "完成";
+"Apply" = "应用";
+"Mode" = "模式";
+"Type" = "类型";
+"Size" = "大小";
+"Hardness" = "硬度";
+"Radius" = "半径";
+"Smoothing" = "平滑";
+"Color" = "颜色";
+"Sample" = "取样";
+"Aligned" = "对齐";
+"This Layer" = "当前图层";
+"All Layers" = "所有图层";
+"Paint" = "绘制";
+"Black · Hide" = "黑色 · 隐藏";
+"White · Reveal" = "白色 · 显示";
+"Mask" = "蒙版";
+"Option-click to set the source" = "Option-点击设置取样点";
+"Low" = "低";
+"High" = "高";
+"Manual" = "手动";
+"Top" = "顶部";
+"Bottom" = "底部";
+"Left" = "左侧";
+"Right" = "右侧";
+"Center" = "居中";
+"Foreground color" = "前景色";
+"Background color" = "背景色";
+"Text color" = "文字颜色";
+
+/* ===== Trim sheet ===== */
+"Trim" = "裁切";
+"Based On" = "基于";
+"Trim Away" = "裁掉";
+
+/* ===== Brush / blur / healing controls ===== */
+"Press 1–9 for 10–90%, 0 for 100%" = "按 1–9 为 10–90%，按 0 为 100%";
+"Paint with the foreground color (B), or erase pixels away (E)" = "用前景色绘制 (B)，或擦除像素 (E)";
+"Liquify pushes pixels · Blur softens · Smudge drags color along" = "液化推动像素 · 模糊柔化 · 涂抹拖拽颜色";
+"Keep the source moving with the brush between strokes; off starts every stroke at the source point" = "让取样点在笔画之间随画笔移动；关闭则每笔都从取样点开始";
+"Copy from the active layer only, or from every visible layer as shown" = "仅从当前图层拷贝，或从所有可见图层拷贝";
+"How far the blur softens, in pixels" = "模糊柔化程度（像素）";
+"The brush trails the pointer on a string this long, so a shaky hand still draws a smooth line" = "画笔按此长度的线跟随指针，手抖也能画出平滑线条";
+
+/* ===== Lasso / selection controls ===== */
+"Press M to switch between Rectangle and Ellipse" = "按 M 在矩形与椭圆之间切换";
+"Press Tab to switch between Wand and Object" = "按 Tab 在魔棒与对象之间切换";
+"Press L to switch between Freehand and Polygonal" = "按 L 在自由套索与多边形套索之间切换";
+"Hold Shift to add or Option to subtract for one outline" = "按住 Shift 添加、Option 减去一个轮廓";
+"Fade the edge of the selection by this many pixels" = "将选区边缘羽化这么多像素";
+"How far each color channel (0–255) can differ from the clicked color and still be selected" = "每个颜色通道 (0–255) 与点击颜色可相差多少仍被选中";
+"Match the clicked pixel, or the average of the pixels around it" = "匹配点击的像素，或周围像素的平均值";
+"Select only similar pixels connected to the one you click; off selects them everywhere" = "仅选择与所点击像素相连的相似像素；关闭则全图选择";
+"Analyze the active layer only, or every visible layer as shown" = "仅分析当前图层，或所有可见图层";
+"Positive values tighten the detected mask inward; negative values expand it outward" = "正值向内收紧检测蒙版；负值向外扩展";
+
+/* ===== Shape controls ===== */
+"Shift-U (or Tab) steps through Rectangle, Ellipse and Line" = "Shift-U（或 Tab）在矩形、椭圆和直线之间切换";
+"Round the rectangle's corners by this many pixels; 0 keeps them square" = "将矩形圆角设为这么多像素；0 保持直角";
+"Shapes fill with the foreground color; click to change it" = "形状以前景色填充；点击可更改";
+
+/* ===== Gradient controls ===== */
+"Linear runs along the line; Radial spreads out from the start point" = "线性沿直线渐变；径向从起点向外扩散";
+
+/* ===== Type controls ===== */
+"Font face, including bold and italic variants" = "字体，包括粗体和斜体变体";
+"Line height, baseline to baseline. Empty or 0 is Auto: 120% of the font size." = "行高，从基线到基线。留空或 0 为自动：字体大小的 120%。";
+
+/* ===== Layers panel ===== */
+"New blank layer (⇧⌘N)" = "新建空白图层 (⇧⌘N)";
+"Group selected layers (⌘G)" = "编组所选图层 (⌘G)";
+"Add layer effect" = "添加图层效果";
+"New adjustment layer" = "新建调整图层";
+"New blank layer" = "新建空白图层";
+"New folder" = "新建文件夹";
+"Layer effects" = "图层效果";
+
+/* ===== Tabs ===== */
+"Drop to open in a new canvas" = "拖放到新画布打开";
+
+/* ===== Camera Raw — detail / optics ===== */
+"Sharpening" = "锐化";
+"Noise Reduction" = "降噪";
+"Remove Chromatic Aberration" = "消除色差";
+"Enable Lens Profile Corrections" = "启用镜头配置文件校正";
+"No lens metadata on this layer. Profile sliders set generic correction strength." = "此图层没有镜头元数据。配置文件滑块设置通用校正强度。";
+"Defringe" = "去边";
+"Click the fringe on the layer. Click the eyedropper again to stop." = "点击图层上的色边。再次点击吸管可停止。";
+"Pulls red and blue fringes apart toward the center to reduce color edging." = "将红蓝边分开拉向中心以减少彩色边缘。";
+"Applies generic profile strength when camera metadata is not available." = "当相机元数据不可用时应用通用配置文件强度。";
+"Click a purple or green fringe to set its hue range." = "点击紫色或绿色色边以设置其色相范围。";
+"Start of the hue range, in degrees." = "色相范围起点（度）。";
+"End of the hue range, in degrees." = "色相范围终点（度）。";
+
+/* ===== Camera Raw — geometry ===== */
+"Off leaves the picture as it is. Guided straightens from lines you draw on the picture." = "关闭保持图片原样。引导模式通过你在图片上绘制的线条进行拉直。";
+"Draw two or more lines on the preview that should be level or vertical." = "在预览上绘制两条或更多应当水平或垂直的线。";
+"Remove every guide line." = "移除所有引导线。";
+"Perspective allows stronger keystone. Rectilinear keeps the warp gentler." = "透视允许更强的梯形校正。直线模式保持较温和的变形。";
+"Crops empty edges after the transform and fits the result back into the frame." = "变换后裁掉空白边缘，并将结果重新适应画框。";
+"Chooses how strongly the calibration sliders below are applied. Version 6 is the current default." = "选择下方校准滑块的强度。版本 6 是当前默认。";
+
+/* ===== Camera Raw — color ===== */
+"Parametric lifts tonal regions. Point places anchors on the curve." = "参数模式提升色调区域。点模式在曲线上放置锚点。";
+"RGB changes brightness. Red, green, and blue also shift the color." = "RGB 改变亮度。红、绿、蓝还会改变颜色。";
+"Input and output of the selected curve point." = "所选曲线点的输入与输出。";
+"Replaces this curve with a straight line or a contrast curve." = "用直线或对比度曲线替换此曲线。";
+"HSL lists every color. Color edits one family. Point Color adjusts a color you pick." = "HSL 列出所有颜色。颜色模式编辑某一色系。点颜色调整你选取的颜色。";
+"Hue shifts the color, Saturation its strength, and Luminance its brightness." = "色相改变颜色，饱和度改变其强度，明度改变其亮度。";
+"Drag a color in the picture. Nearby color families move together." = "拖动图片中的颜色。附近的色系会一起移动。";
+"Click the picture to save a color. Up to eight colors." = "点击图片以保存颜色。最多八个颜色。";
+"Select this picked color." = "选择此拾取的颜色。";
+"Dims the picture outside this color's range. It is not kept when you press OK." = "将此颜色范围外的图片变暗。按好时不会保留。";
+"Three-Way shows shadows, midtones, and highlights. The other choices show one wheel." = "三向模式显示阴影、中间调和高光。其他选项显示一个色轮。";
+"Drag inside the wheel. Angle sets hue, distance sets saturation." = "在色轮内拖动。角度设置色相，距离设置饱和度。";
+"Hue and saturation of this wheel." = "此色轮的色相与饱和度。";
+"Drag to set hue and saturation. Double-click to reset this wheel." = "拖动以设置色相与饱和度。双击重置此色轮。";
+
+/* ===== Camera Raw — general ===== */
+"Red, green, and blue of the pixel under the pointer." = "指针下像素的红、绿、蓝值。";
+"Auto balances the average color. Custom follows Temperature and Tint." = "自动平衡平均颜色。自定义跟随色温和色调。";
+"Click a pixel that should be neutral." = "点击应为中性的像素。";
+"Diffusion is soft and wide, Bloom is tighter, and Halation is a red fringe." = "扩散柔和且宽广，光晕更集中，光晕晕染为红色边缘。";
+"Highlight Priority protects bright edges. Color Priority also reduces color. Paint Overlay covers the edges evenly." = "高光优先保护亮部边缘。颜色优先同时减少颜色。画笔覆盖均匀覆盖边缘。";
+
+/* ===== Common sheet buttons ===== */
+"Preview" = "预览";
+"Reset" = "复位";
+"Limited to the selection" = "仅限于选区";
+
+/* ===== Transform inspector ===== */
+"Auto Select" = "自动选择";
+"Show Controls" = "显示控件";
+"Flip H" = "水平翻转";
+"Flip V" = "垂直翻转";
+
+/* ===== Canvas size ===== */
+"Canvas Size" = "画布大小";
+"Width" = "宽度";
+"Height" = "高度";
+"Relative to current dimensions" = "相对于当前尺寸";
+"Lock original aspect ratio" = "锁定原始宽高比";
+"Anchor" = "锚点";
+"Keeps this point fixed. Artwork is not scaled; cropped content remains outside the canvas." = "保持此点固定。画作不缩放；被裁剪的内容保留在画布外。";
+"Extension color" = "扩展颜色";
+
+/* ===== Image size ===== */
+"Image Size" = "图像大小";
+"Lock aspect ratio" = "锁定宽高比";
+"Resolution" = "分辨率";
+"pixels/inch" = "像素/英寸";
+"Resample" = "重新采样";
+"Resizes layer pixels and applies existing transforms. Undo restores the originals." = "调整图层像素大小并应用现有变换。撤销可恢复原始。";
+"Only print dimensions and resolution change. Pixels stay unchanged." = "仅更改打印尺寸和分辨率。像素保持不变。";
+"Resize" = "调整大小";
+
+/* ===== New canvas ===== */
+"Custom" = "自定义";
+"Open project" = "打开项目";
+"Import image" = "导入图像";
+"Create canvas" = "创建画布";
+
+/* ===== Color picker ===== */
+"Click the canvas to sample" = "点击画布取样";
+
+/* ===== Filters sheet ===== */
+"Tint" = "着色";
+"Shadows" = "阴影";
+"Midtones" = "中间调";
+"Highlights" = "高光";
+"Preserve Luminosity" = "保留明度";
+"Hide the background behind a layer mask, keeping the foreground subjects. The pixels stay, so the background can be painted back at any time." = "用图层蒙版隐藏背景，保留前景主体。像素保留，因此背景随时可以绘制回来。";
+"Fill the selection using surrounding pixels from this layer." = "使用此图层周围像素填充选区。";
+"Distribution" = "分布";
+"Uniform" = "均匀";
+"Gaussian" = "高斯";
+"Monochromatic" = "单色";
+"Positive straightens lines that bow outward (barrel); negative, lines that bow inward (pincushion)." = "正值拉直向外弯曲的线条（桶形）；负值拉直向内弯曲的线条（枕形）。";
+"Characters" = "字符";
+"Dark" = "暗";
+"Light" = "亮";
+"Light on Dark" = "亮色于暗色";
+"Reverse" = "反向";
+
+/* ===== Raw develop ===== */
+"Importing…" = "正在导入…";
+"Import" = "导入";
+
+/* ===== Layer effects sheet ===== */
+"Stroke" = "描边";
+"Outside" = "外部";
+"Inside" = "内部";
+"Drop Shadow" = "投影";
+"Color Overlay" = "颜色叠加";
+"Inner Shadow" = "内阴影";
+"Outer Glow" = "外发光";
+"Inner Glow" = "内发光";
+
+/* ===== Hue / saturation ===== */
+"Apply outside this range instead" = "改为应用到此范围之外";
+"Colorize" = "着色";
+
+/* ===== Crop ===== */
+"Crop" = "裁剪";
+"Apply Crop" = "应用裁剪";
+
+/* ===== JPEG export ===== */
+"Export JPEG" = "导出 JPEG";
+"Quality" = "质量";
+"Background for transparency" = "透明背景";
+"Updating…" = "正在更新…";
+"Export…" = "导出…";
+
+/* ===== Levels ===== */
+"Loading histogram…" = "正在加载直方图…";
+"Auto" = "自动";
+
+/* ===== PSD conversion ===== */
+"Reading the Photoshop file…" = "正在读取 Photoshop 文件…";
+
+/* ===== Command palette ===== */
+"No commands match" = "没有匹配的命令";
+
+/* ===== Grid settings ===== */
+"Style" = "样式";
+"Opacity" = "不透明度";
+"Gridline every" = "网格线间距";
+"pixels" = "像素";
+"Subdivisions" = "细分";
+"Restore Defaults" = "恢复默认";
+
+/* ===== Color range (ColorRange.rawValue) ===== */
+"Master" = "全图";
+"Reds" = "红色";
+"Yellows" = "黄色";
+"Greens" = "绿色";
+"Cyans" = "青色";
+"Blues" = "蓝色";
+"Magentas" = "品红";
+
+/* ===== Hue sampling (HueSampleMode.rawValue) ===== */
+"Remove" = "移除";
+
+/* ===== Camera Raw — curve / mixer / grading ===== */
+"Parametric" = "参数";
+"Point" = "点";
+"HSL" = "HSL";
+"Point Color" = "点颜色";
+"Luminance" = "明度";
+"Three-Way" = "三向";
+"Global" = "全局";
+
+/* ===== Camera Raw — geometry / process ===== */
+"Off" = "关闭";
+"Guided" = "引导";
+"Perspective" = "透视";
+"Rectilinear" = "直线";
+"Version 1" = "版本 1";
+"Version 2" = "版本 2";
+"Version 3" = "版本 3";
+"Version 4" = "版本 4";
+"Version 5" = "版本 5";
+"Version 6" = "版本 6";
+
+/* ===== Camera Raw — glow / vignette ===== */
+"Diffusion" = "扩散";
+"Bloom" = "泛光";
+"Halation" = "光晕";
+"Highlight Priority" = "高光优先";
+"Color Priority" = "颜色优先";
+"Paint Overlay" = "画笔覆盖";
+
+/* ===== Camera Raw — section headers ===== */
+"Camera Raw · Light" = "光线";
+"Camera Raw · Color" = "颜色";
+"Camera Raw · Color Grading" = "颜色分级";
+"Camera Raw · Effects" = "效果";
+"Camera Raw · Curve" = "曲线";
+"Camera Raw · Color Mixer" = "颜色混合器";
+"Camera Raw · Detail" = "细节";
+"Camera Raw · Optics" = "光学";
+"Camera Raw · Geometry" = "几何";
+"Camera Raw · Calibration" = "校准";
+
+/* ===== Camera Raw — mixer color families ===== */
+"Oranges" = "橙色";
+"Aquas" = "青色";
+"Purples" = "紫色";
+
+/* ===== Dither styles (DitherStyle.rawValue) ===== */
+"Atkinson (Classic Mac)" = "阿特金森（经典 Mac）";
+"Floyd–Steinberg" = "弗洛伊德–斯坦伯格";
+"Bayer 2 × 2" = "拜耳 2 × 2";
+"Bayer 4 × 4" = "拜耳 4 × 4";
+"Bayer 8 × 8" = "拜耳 8 × 8";
+"Halftone Dots" = "半色调圆点";
+"Halftone Lines" = "半色调线条";
+"Halftone Diamonds" = "半色调菱形";
+"Mac Patterns" = "Mac 图案";
+"ASCII" = "ASCII";
+"Scanlines (CRT)" = "扫描线 (CRT)";
+
+/* ===== Dither pixel shape / colors ===== */
+"Square" = "方形";
+"Dot" = "圆点";
+"Two Colors" = "双色";
+"Original" = "原始";
+
+/* ===== Canvas units (CanvasUnit / NewCanvasUnit) ===== */
+"Pixels" = "像素";
+"Percent" = "百分比";
+"Inches" = "英寸";
+"Centimeters" = "厘米";
+"Millimeters" = "毫米";
+
+/* ===== Grid presets (GridAppearance.Preset.rawValue) ===== */
+"Light Gray" = "浅灰";
+"Light Blue" = "浅蓝";
+"Light Red" = "浅红";
+"Medium Blue" = "中蓝";
+"Yellow" = "黄色";
+"Magenta" = "品红";
+"Cyan" = "青";
+
+/* ===== Grid styles (GridAppearance.Style.rawValue) ===== */
+"Lines" = "线条";
+"Dashed Lines" = "虚线";
+"Dots" = "点";
+
+/* ===== New canvas background ===== */
+"Transparent canvas" = "透明画布";
+"White canvas" = "白色画布";
+"Black canvas" = "黑色画布";
+
+/* ===== Format strings for assembled labels ===== */
+"%@ color" = "%@ 颜色";
+"%@ effect" = "%@ 效果";
+"Hide %@" = "隐藏 %@";
+"Show %@" = "显示 %@";
+"Align %@" = "对齐 %@";
+"Original %@ histogram" = "原始 %@ 直方图";
+"%@ of %@" = "%@ 的 %@";
+"Click to select; double-click to edit; Option-drag to copy %@" = "点击选择；双击编辑；Option-拖动复制 %@";
+"Editable text" = "可编辑文字";
+
+/* ===== Camera Raw scope ===== */
+"Histogram" = "直方图";
+"Vectorscope" = "矢量示波器";
