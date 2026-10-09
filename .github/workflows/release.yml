@@ -43,6 +43,11 @@ jobs:
           -derivedDataPath DerivedData
           CODE_SIGN_IDENTITY=-
 
+      - name: Re-sign app (ad-hoc)
+        run: >
+          codesign --force --deep --sign - --timestamp=none
+          DerivedData/Build/Products/Release/Compositor.app
+
       - name: Package dmg
         run: |
           mkdir -p dmg-staging
