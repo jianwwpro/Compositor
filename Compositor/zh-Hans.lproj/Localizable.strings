@@ -1,6 +1,10 @@
 /* Compositor — Simplified Chinese (zh-Hans) */
 
 /* ===== Main menu (CompositorApp.swift) ===== */
+"Select" = "选择";
+"Image" = "图像";
+"Filter" = "滤镜";
+"Layer" = "图层";
 "Undo" = "撤销";
 "Redo" = "重做";
 "New Canvas…" = "新建画布…";
