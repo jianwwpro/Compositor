@@ -1,0 +1,57 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version tag to publish (e.g. v1.0.0)'
+        required: true
+        default: 'v1.0.0'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: release
+    runs-on: macos-26
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Select Xcode 26.6
+        run: sudo xcode-select -s /Applications/Xcode_26.6.app
+
+      - name: Resolve Swift packages
+        run: >
+          xcodebuild -resolvePackageDependencies
+          -project Compositor.xcodeproj
+          -scheme Compositor
+          -onlyUsePackageVersionsFromResolvedFile
+
+      - name: Build release app
+        run: >
+          xcodebuild build
+          -project Compositor.xcodeproj
+          -scheme Compositor
+          -configuration Release
+          -destination 'platform=macOS,arch=arm64'
+          -derivedDataPath DerivedData
+          CODE_SIGN_IDENTITY=-
+
+      - name: Package app
+        run: >
+          ditto -c -k --keepParent
+          DerivedData/Build/Products/Release/Compositor.app
+          Compositor.zip
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.version || github.ref_name }}
+          files: Compositor.zip
+          generate_release_notes: true
