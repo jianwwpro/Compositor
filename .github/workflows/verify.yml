@@ -87,6 +87,7 @@ jobs:
           -destination 'platform=macOS,arch=arm64'
           -derivedDataPath DerivedData
           CODE_SIGN_IDENTITY=-
+          DEPLOYMENT_POSTPROCESSING=YES
 
       - name: Re-sign app (ad-hoc)
         run: >
