@@ -200,7 +200,8 @@ struct ExportAsSheet: View {
     private var pageSize: String {
         let dpi = raster.resolution > 0 ? raster.resolution : 72
         let inches = { (pixels: Int) in (Double(pixels) / dpi).formatted(.number.precision(.fractionLength(0...2))) }
-        return "\(inches(width)) × \(inches(height)) in at \(Int(dpi.rounded())) DPI"
+        return String(format: NSLocalizedString("%@ × %@ in at %d DPI", comment: "PDF page size readout, e.g. 8.5 × 11 in at 300 DPI"),
+                      inches(width), inches(height), Int(dpi.rounded()))
     }
     private var percent: String { "\(Int((shownZoom * 100).rounded()))%" }
     private func zoomBy(_ direction: Int) {

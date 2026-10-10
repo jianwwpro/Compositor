@@ -66,7 +66,7 @@ struct CameraRawGeometryControls: View {
                                 range: ClosedRange<Double> = CameraRawGeometrySettings.toneRange, help: String) -> some View {
         let value = raw.geometry[keyPath: key]
         return HStack(spacing: 10) {
-            Text(title).frame(minWidth: CameraRawControls.labelWidth, alignment: .leading).help(help)
+            Text(LocalizedStringKey(title)).frame(minWidth: CameraRawControls.labelWidth, alignment: .leading).help(help)
                 .scrubbable(sensitivity: 1,
                             value: Binding(get: { raw.geometry[keyPath: key] },
                                            set: { newValue in update { $0.cameraRaw.geometry[keyPath: key] = newValue } }), range: range)
@@ -124,7 +124,7 @@ struct CameraRawCalibrationControls: View {
     private func calibrationSlider(_ title: String, _ key: WritableKeyPath<CameraRawCalibrationSettings, Double>, help: String) -> some View {
         let value = raw.calibration[keyPath: key]
         return HStack(spacing: 10) {
-            Text(title).frame(minWidth: CameraRawControls.labelWidth, alignment: .leading).help(help)
+            Text(LocalizedStringKey(title)).frame(minWidth: CameraRawControls.labelWidth, alignment: .leading).help(help)
                 .scrubbable(sensitivity: 1,
                             value: Binding(get: { raw.calibration[keyPath: key] },
                                            set: { newValue in update { $0.cameraRaw.calibration[keyPath: key] = newValue } }),

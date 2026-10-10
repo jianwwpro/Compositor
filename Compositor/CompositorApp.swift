@@ -301,7 +301,7 @@ struct CompositorApp: App {
                     }
                 }
                 CommandMenu("Filter") {
-                    Button(session.lastFilter.map { "Last Filter: " + $0.rawValue } ?? "Last Filter") {
+                    Button(session.lastFilter.map { String(format: NSLocalizedString("Last Filter: %@", comment: ""), $0.displayName) } ?? NSLocalizedString("Last Filter", comment: "")) {
                         Task { await session.repeatLastFilter() }
                     }
                         // ⌃⌘F, as in Photoshop; ⌘F is the command palette.

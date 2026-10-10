@@ -16,6 +16,7 @@
 "Save As…" = "另存为…";
 "Export PNG…" = "导出 PNG…";
 "Export JPEG…" = "导出 JPEG…";
+"Export As…" = "导出为…";
 "Close Project" = "关闭项目";
 "Check for Updates…" = "检查更新…";
 "Command Palette…" = "命令面板…";
@@ -24,6 +25,7 @@
 "Zoom In" = "放大";
 "Zoom Out" = "缩小";
 "Pixel Grid (800% and above)" = "像素网格（800% 及以上）";
+"Navigator (300% and above)" = "导航器（300% 及以上）";
 "Show Transform Controls" = "显示变换控件";
 "Show" = "显示";
 "Grid" = "网格";
@@ -115,6 +117,7 @@
 "Vignette" = "晕影";
 "Bloom / Glow" = "光晕 / 发光";
 "Dither" = "抖动";
+"Scanlines" = "扫描线";
 "Tonal Contrast" = "色调对比";
 "Lens Correction" = "镜头校正";
 "Camera Raw Filter" = "Camera Raw 滤镜";
@@ -126,6 +129,8 @@
 "Grain" = "颗粒";
 "Black & White" = "黑白";
 "Color Balance" = "色彩平衡";
+"Last Filter" = "上次滤镜";
+"Last Filter: %@" = "上次滤镜：%@";
 
 /* ===== Adjustment layer names (AdjustmentKind.rawValue) ===== */
 "Hue/Saturation" = "色相/饱和度";
@@ -418,6 +423,17 @@
 "Light" = "亮";
 "Light on Dark" = "亮色于暗色";
 "Reverse" = "反向";
+"Line Spacing" = "行距";
+"Thickness" = "粗细";
+"Glow" = "辉光";
+"Displace" = "位移";
+"Smoothness" = "平滑度";
+"Threshold" = "阈值";
+"Wobble" = "抖动";
+"Color Split" = "色彩分离";
+"Density" = "密度";
+"Black Level" = "黑电平";
+"Colors" = "颜色";
 
 /* ===== Raw develop ===== */
 "Importing…" = "正在导入…";
@@ -450,6 +466,14 @@
 "PNG" = "PNG";
 "JPEG" = "JPEG";
 "PDF" = "PDF";
+"Export As" = "导出为";
+"Format" = "格式";
+"Page" = "页面";
+"Background" = "背景";
+"Export Background" = "导出背景";
+"Transparency kept · sRGB" = "保留透明 · sRGB";
+"Navigator" = "导航器";
+"Click or drag to move the view" = "点击或拖动以移动视图";
 
 /* ===== Levels ===== */
 "Loading histogram…" = "正在加载直方图…";
@@ -582,7 +606,75 @@
 "%@ of %@" = "%@ 的 %@";
 "Click to select; double-click to edit; Option-drag to copy %@" = "点击选择；双击编辑；Option-拖动复制 %@";
 "Editable text" = "可编辑文字";
+"%@ × %@ in at %d DPI" = "%@ × %@ 英寸，%d DPI";
 
 /* ===== Camera Raw scope ===== */
 "Histogram" = "直方图";
 "Vectorscope" = "矢量示波器";
+
+/* ===== Camera Raw — light / color / effects ===== */
+"Whites" = "白色";
+"Blacks" = "黑色";
+"White Balance" = "白平衡";
+"Click the original layer. Click the eyedropper again to stop." = "点击原始图层。再次点击吸管可停止。";
+"Temperature" = "色温";
+"Vibrance" = "自然饱和度";
+"Texture" = "纹理";
+"Clarity" = "清晰度";
+"Dehaze" = "去雾";
+"Range" = "范围";
+"Spread" = "扩散";
+"Warmth" = "暖调";
+"Amount" = "数量";
+"Midpoint" = "中点";
+"Roundness" = "圆度";
+"Feather" = "羽化";
+"Roughness" = "粗糙度";
+
+/* ===== Camera Raw — detail / optics labels ===== */
+"Detail" = "细节";
+"Masking" = "蒙版";
+"Luminance Detail" = "明度细节";
+"Luminance Contrast" = "明度对比度";
+"Color Detail" = "颜色细节";
+"Color Smoothness" = "颜色平滑度";
+"Distortion" = "畸变";
+"Vignetting" = "晕影";
+"Purple Amount" = "紫色数量";
+"Purple Hue" = "紫色色相";
+"Green Amount" = "绿色数量";
+"Green Hue" = "绿色色相";
+
+/* ===== Camera Raw — geometry / calibration labels ===== */
+"Upright" = "拉直";
+"Draw Guides" = "绘制引导线";
+"Drag on the layer to place a guide. Draw at least two lines." = "在图层上拖动以放置引导线。至少绘制两条线。";
+"Projection" = "投影";
+"Vertical" = "垂直";
+"Horizontal" = "水平";
+"Rotate" = "旋转";
+"Aspect" = "长宽比";
+"Scale" = "缩放";
+"Offset X" = "X 偏移";
+"Offset Y" = "Y 偏移";
+"Constrain Crop" = "约束裁剪";
+"Process" = "处理版本";
+"Red Primary" = "红色原色";
+"Green Primary" = "绿色原色";
+"Blue Primary" = "蓝色原色";
+
+/* ===== Camera Raw — curve / mixer / grading labels ===== */
+"Preset" = "预设";
+"Lights" = "亮调";
+"Darks" = "暗调";
+"Medium Contrast" = "中等对比度";
+"Strong Contrast" = "强对比度";
+"Refine Saturation" = "细化饱和度";
+"Targeted Adjustment" = "目标调整";
+"Hue Shift" = "色相偏移";
+"Saturation Shift" = "饱和度偏移";
+"Luminance Shift" = "明度偏移";
+"Hue Range" = "色相范围";
+"Saturation Range" = "饱和度范围";
+"Luminance Range" = "明度范围";
+"Visualize Range" = "可视化范围";

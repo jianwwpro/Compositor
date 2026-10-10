@@ -297,7 +297,7 @@ struct CameraRawControls: View {
                         reset resetValue: Double = 0, help: String) -> some View {
         let step = pow(10, Double(decimals))
         return HStack(spacing: 10) {
-            Text(title)
+            Text(LocalizedStringKey(title))
                 .frame(minWidth: Self.labelWidth, alignment: .leading)
                 .help(help)
                 .onTapGesture(count: 2) { reset(key, to: resetValue) }

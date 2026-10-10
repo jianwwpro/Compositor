@@ -278,7 +278,7 @@ struct FilterSheet: View {
         control("Black Level", \.scanlines.blackLevel, range: 0...100, unit: "%", decimals: 0, logarithmic: false)
             .help("How bright the lines are where the picture is black, so they show even over black")
         Picker("Colors", selection: Binding(get: { lines.colors }, set: { new in update { $0.scanlines.colors = new } })) {
-            ForEach(DitherColors.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+            ForEach(DitherColors.allCases, id: \.self) { Text($0.displayName).tag($0) }
         }
         .fixedSize()
         if lines.colors == .twoColors {
@@ -330,7 +330,7 @@ struct FilterSheet: View {
         let step = pow(10, Double(decimals))
         let reset = { update { $0 = Self.resetting(key, in: $0) } }
         return HStack(spacing: 10) {
-            Text(title).fixedSize()
+            Text(LocalizedStringKey(title)).fixedSize()
                 .background(GeometryReader { Color.clear.preference(key: LabelWidthKey.self, value: $0.size.width) })
                 .frame(width: labelWidth, alignment: .leading)
                 .onTapGesture(count: 2) { if track != nil { reset() } }
