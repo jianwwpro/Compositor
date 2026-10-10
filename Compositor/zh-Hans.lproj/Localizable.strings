@@ -447,6 +447,9 @@
 "Background for transparency" = "透明背景";
 "Updating…" = "正在更新…";
 "Export…" = "导出…";
+"PNG" = "PNG";
+"JPEG" = "JPEG";
+"PDF" = "PDF";
 
 /* ===== Levels ===== */
 "Loading histogram…" = "正在加载直方图…";

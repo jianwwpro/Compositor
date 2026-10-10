@@ -28,13 +28,10 @@ struct RawDitherTests {
         let image = try #require(RawImporter.dithered(gradient(), context: context))
         #expect(image.width == 300 && image.height == 400)
         let means = try rowMeans(image)
-        let ideal: [Double] = (0..<400).map { index in
-            let i: Double = Double(index)
-            let x: Double = i + 0.5
-            let y: Double = 0.02 * x
-            let z: Double = y / 400.0
-            let t: Double = 0.30 + z
-            return t * 255.0
+        // Written out step by step: as one expression, CI's compiler gave up type-checking it.
+        let ideal: [Double] = (0..<400).map { row in
+            let tone: Double = 0.30 + 0.02 * (Double(row) + 0.5) / 400
+            return tone * 255
         }
         let ditheredError = zip(means, ideal).map { abs($0 - $1) }.max() ?? 1
         // Plain rounding is off by up to half a step on every row in between.
